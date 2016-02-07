@@ -5,4 +5,17 @@
 #logo{
 	margin-left: 15px;
 }
+body{
+	background-image: url('/images/background.jpg');
+	background-position: cover;
+}
 
+.angosto{
+	width: 80%;
+
+}
+
+#logoimage{
+	width: 30px;
+	height: 30px;
+}

@@ -3,9 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 
-class Item extends Model
+class Item extends Model implements SluggableInterface
 {
+
+    use SluggableTrait;
+
+    protected $sluggable = [
+        'build_from'    =>  'title',
+        'save_to'       =>  'slug'
+    ];
+
     protected $table = "items";
 
     protected $fillable = ['title', 'description', 'dvds', 'seasons', 'episodes', 'duration', 'sentense', 'year', 'micro', 'ram', 'gpu', 'hdd', 'user_id', 'categories_id'];

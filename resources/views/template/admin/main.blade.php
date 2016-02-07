@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>@yield('title', 'Home')| Pagina del Administrador</title>
     {!! Html::style('css/bootstrap.css') !!}
+    {!! Html::style('css/main.css') !!}
     {!! Html::script('js/jquery.js') !!}
     {!! Html::script('js/bootstrap.js') !!}
 </head>
