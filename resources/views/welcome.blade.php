@@ -1,11 +1,10 @@
-@extends('admin.template.main')
+@extends('template.admin.main')
 
-@section ('title')
-    Inicio de mi Pagina
+@section('title')
+    Inicio de mi pagina
 @endsection
 
-
 @section('body')
-    <h1>Hola esto es Bootstrap</h1>
-    <a href="" class="btn btn-danger">Admin</a>
+    Esta es una pagina de prueba de Bootstrap
+    <a href="" class="btn btn-success"></a>
 @endsection
