@@ -12,7 +12,20 @@
 
 	@include('template.admin.partials.nav')
 
-	@yield('body')
+	<div class="panel panel-default center-block angosto">
+        <div class="panel-heading text-center">
+            <h1 class="panel-title">@yield('title_panel')</h1>
+        </div>
+        <div class="panel-body">
+            @yield('body_panel')
+         </div>
+    </div>
+
+    <div class="panel panel-default center-block angosto margin-top">
+        <div class="panel-body text-right">
+            <h5>FrontalGeek <small>hecho por geeks para geeks</small></h5>
+         </div>
+    </div>
 
 </body>
 </html>

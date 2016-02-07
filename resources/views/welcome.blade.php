@@ -4,14 +4,26 @@
     Inicio de mi pagina
 @endsection
 
-@section('body')
-    <div class="panel panel-default center-block angosto">
-        <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
-        </div>
-        <div class="panel-body">
-            Your models should implement Sluggable's interface and use it's trait. You should also define a protected property $sluggable with any model-specific configurations (see Configuration below for details):
-         </div>
-    </div>
+@section('title_panel', 'Bienvenido al Catalogo de FrontalGeek')
+    
+@section('body_panel')
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-md-4 col-lg-4 col-sm-1 col-xs-1">
+    			<h2 class="text-center">SERIES</h2>
+    			<p>Todas las series de nuestro catalogo</p>
+   			 </div>
+   			 <div class="col-md-4 col-lg-4 col-sm-1 col-xs-1">
+    			<h2 class="text-center">PELICULAS</h2>
+    			<p>Todas las series de nuestro catalogo</p>
+   			 </div>
+   			 <div class="col-md-4 col-lg-4 col-sm-1 col-xs-1">
+    			<h2 class="text-center">JUEGOS</h2>
+    			<p>Todas las series de nuestro catalogo</p>
+   			 </div>
 
+    	
+  		</div>
+    </div>
+    
 @endsection

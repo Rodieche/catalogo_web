@@ -15,17 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
+Route::group(['prefix'	=>	'admin'], function(){	//grupo del administrador catalogo.com/admin/...
 
-Route::group(['middleware' => ['web']], function () {
-    //
+	Route::resource('users', 'UsersController');		//Uso los CRUD del UsersController
+
+});
+
+Route::group(['prefix'	=>	'category'], function(){	//grupo del administrador catalogo.com/category/...
+
+	Route::resource('category', 'CategoriesController');		//Uso los CRUD del CategoryController
+
 });
