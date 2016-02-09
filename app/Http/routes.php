@@ -18,6 +18,10 @@ Route::get('/', function () {
 Route::group(['prefix'	=>	'admin'], function(){	//grupo del administrador catalogo.com/admin/...
 
 	Route::resource('users', 'UsersController');		//Uso los CRUD del UsersController
+	Route::get('users/{id}/destroy', [
+			'uses'	=>	'UsersController@destroy',
+			'as'	=>	'admin.users.destroy'
+		]);
 
 });
 

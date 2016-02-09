@@ -9,21 +9,25 @@
 	{!! Form::open(array('route' => 'admin.users.store')) !!}
     
 		<div class="form-group">
+			 <i class="fa fa-smile-o"></i>
 			 {!! Form::label('name', 'Nombre') !!}
 			 {!! Form::text('name', null, ['class'	=>	'form-control', 'placeholder'	=>	'Nombre completo' ,'required']) !!}
 		</div>
 
 		<div class="form-group">
+			 <i class="fa fa-envelope-o"></i>
 			 {!! Form::label('email', 'Correo electronico') !!}
 			 {!! Form::email('email', null, ['class'	=>	'form-control', 'placeholder'	=>	'example@mydomain.com' ,'required']) !!}
 		</div>
 
 		<div class="form-group">
+			 <i class="fa fa-lock"></i>
 			 {!! Form::label('password', 'Contraseña') !!}
 			 {!! Form::password('password', ['class'	=>	'form-control', 'placeholder'	=>	'No digas a nadie tus contraseñas' ,'required']) !!}
 		</div>
 
 		<div class="form-group">
+			<i class="fa fa-users"></i>
 			{!! Form::label('type', 'Tipo') !!}
 			{!! Form::select('type',['' => 'Selecciona el tipo de usuario','root' => 'Administrador', 'user' => 'Miembro'],null,['class'=> 'form-control']) !!}
 		</div>

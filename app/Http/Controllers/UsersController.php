@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use DB;                                     // PAGINATE
+use Laracasts\Flash\Flash;                  // FLASH MESSAGE
 
 class UsersController extends Controller
 {
@@ -29,7 +31,9 @@ class UsersController extends Controller
         $user->password = bcrypt($request->password);
         $user->type = $request->type;
         $user->save();
-        dd('Usuario Creado con Exito!');
+
+        Flash::success('El usuario ' .$user->name . ' se ha registrado de forma exitosa');
+        return view('welcome');
     }
 
     public function show($id){
@@ -45,6 +49,12 @@ class UsersController extends Controller
     }
 
     public function destroy($id){
+
+        $user = User::find($id);
+        $user->delete();
+
+        Flash::warning('El usuario ' .$user->name . ' ha sido eliminado de forma exitosa');
+        return view('welcome');
 
     }
 }
