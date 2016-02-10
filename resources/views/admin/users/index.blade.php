@@ -29,7 +29,7 @@
 							<span class="label label-success">Administrador</span>
 						@endif
 					</td>
-					<td><a href="" class="btn btn-warning"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a> 
+					<td><a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-warning"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a> 
 					<a href="{{ route('admin.users.destroy', $user->id) }}" onclick="return confirm('¿Seguro que desea eliminar al usuario {{ $user->name }} ?')" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a></td>
 				</tr>
 			@endforeach

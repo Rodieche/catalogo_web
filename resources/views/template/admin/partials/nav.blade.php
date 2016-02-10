@@ -8,7 +8,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="/">
 					<img alt="Brand" src="/images/icon.png" id="logoimage" align="left"><strong>&nbsp Catalogo</strong></a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->

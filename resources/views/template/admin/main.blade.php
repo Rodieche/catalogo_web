@@ -25,8 +25,8 @@
     </div>
 
     <div class="panel panel-default center-block angosto margin-top">
-        <div class="panel-body text-right">
-            <h5>FrontalGeek <small>hecho por geeks para geeks</small></h5>
+        <div class="panel-body">
+            <h5 class="text-right">FrontalGeek <small>hecho por geeks para geeks</small></h5>
          </div>
     </div>
 
