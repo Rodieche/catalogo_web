@@ -6,6 +6,14 @@
 
 @section('body_panel')
 
+	@if(count($errors) > 0)
+		<div class="alert alert-danger" role="alert">
+			@foreach($errors->all() as $error)
+				<li> {{ $error }} </li>
+			@endforeach
+		</div>
+	@endif
+
 	{!! Form::open(array('route' => array('admin.users.update', $user->id), 'method' => 'PUT')) !!}
     
 		<div class="form-group">

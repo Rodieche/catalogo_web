@@ -9,6 +9,9 @@ use App\Http\Controllers\Controller;
 use App\User;
 use DB;                                     // PAGINATE
 use Laracasts\Flash\Flash;                  // FLASH MESSAGE
+use App\Http\Requests\UserRequestCreate;
+use App\Http\Requests\UserRequestUpdate;
+
 
 class UsersController extends Controller
 {
@@ -25,7 +28,7 @@ class UsersController extends Controller
     
     }
 
-    public function store(Request $request){
+    public function store(UserRequestCreate $request){
 
         $user = new User($request->all());
         $user->password = bcrypt($request->password);
@@ -46,12 +49,13 @@ class UsersController extends Controller
         return view('admin.users.edit')->with('user', $user);
     }
 
-    public function update(Request $request, $id){
+    public function update(UserRequestUpdate $request, $id){
 
         $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
         $user->type = $request->type;
+        
         $user->save();
 
         Flash::success('Los cambios en el usuario ' .$user->id . ' se han registrado con exito');

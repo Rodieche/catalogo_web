@@ -1,0 +1,1 @@
+@include('template.admin.main')

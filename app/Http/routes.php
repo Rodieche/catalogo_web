@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'	=>	'admin'], function(){	//grupo del administrador catalogo.com/admin/...
+Route::group(['prefix'	=>	'admin','middleware' => 'web'], function(){	//grupo del administrador catalogo.com/admin/...
 
 	Route::resource('users', 'UsersController');		//Uso los CRUD del UsersController
 	
@@ -26,8 +26,8 @@ Route::group(['prefix'	=>	'admin'], function(){	//grupo del administrador catalo
 
 });
 
-//Route::group(['prefix'	=>	'category'], function(){	//grupo del administrador catalogo.com/category/...
+Route::group(['middleware' => 'web'], function(){	//grupo del administrador catalogo.com/category/...
 
-//	Route::resource('category', 'CategoriesController');		//Uso los CRUD del CategoryController
+	Route::resource('categories', 'CategoriesController');		//Uso los CRUD del CategoryController
 
-//});
+});

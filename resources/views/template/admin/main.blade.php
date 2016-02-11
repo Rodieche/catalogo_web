@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	@include('template.admin.partials.nav')
+	@include('template.partials.nav')
 
     <div class="panel panel-default center-block angosto">
         <div class="panel-heading text-center">
