@@ -31,3 +31,9 @@ Route::group(['middleware' => 'web'], function(){	//grupo del administrador cata
 	Route::resource('categories', 'CategoriesController');		//Uso los CRUD del CategoryController
 
 });
+
+Route::group(['middleware' => 'web'], function(){
+
+	Route::resource('categories', 'CategoriesController');
+
+});
